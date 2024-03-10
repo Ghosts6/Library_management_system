@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library</title>
+</head>
+<body>
+    <h1>---welcome to our program---</h1>
+    <div id="particles-js"></div>
+    <div class="container">
+        <div class="menu">
+            <u>select operation  :</u>
+            <div class="button">
+            <button class="operation-button">add book</button>
+            <button class="operation-button">book list</button>
+            <button class="operation-button">search</button>
+            <button class="operation-button">exit</button>
+            </div>
+        </div>
+        <div class="add-book">
+            <u>Adding new book</u>
+            <div class="input-container">
+                <label for="name">Book name:</label>
+                <i class="fa-solid fa-pen"></i>
+                <input type="text" id="name" placeholder="Book name">
+            </div>
+            <div class="input-container">
+                <label for="Author">Author Name:</label>
+                <i class="fa-solid fa-pen"></i>
+                <input type="text" id="author-name" placeholder="Author name">
+            </div>
+            <div class="input-container">
+                <label for="Genre">Genre:</label>
+                <i class="fa-solid fa-pen"></i>
+                <input type="text" id="genre" placeholder="Genre">
+            </div>
+            <div class="input-container">
+                <label for="Edition">Edition Number:</label>
+                <i class="fa-solid fa-pen"></i>
+                <input type="text" id="edition-number" placeholder="edition">
+            </div>
+            <div class="input-container">
+                <label for="publish-date">Date of publish:</label>
+                <i class="fa-solid fa-pen"></i>
+                <input type="text" id="publish-date" placeholder="publish date">
+            </div>
+            <button class="submit-button" id="new-book">submit</button>
+        </div>
+        <div class="book-list">
+            <u>book list</u>
+            <div class="list">
+
+            </div>
+            <button class="submit-button" id="menuButton">menu</button>
+        </div>
+        <div class="search">
+            <u>Searching for book</u>
+            <div class="input-container">
+                <label for="search">search book:</label>
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" id="search-name" placeholder="book name">    
+            </div>
+            <button class="submit-button">submit</button>
+        </div>
+        <div class="exit">
+            <h1>End of program</h1>
+            <h2>Thanks for time</h2>
+            <u>Exit</u>
+        </div>
+    </div>
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+<script src="script.js"></script>    
+</body>
+</html>
