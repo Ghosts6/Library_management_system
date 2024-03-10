@@ -668,3 +668,5 @@ class Inventory(models.Model):
 ```
 
 # ⏯️video:
+
+[library.webm](https://github.com/Ghosts6/Library_management_system/assets/95994481/18f40d1b-4e9a-4860-847e-22f7942b19a5)
