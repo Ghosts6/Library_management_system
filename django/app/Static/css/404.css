@@ -1,0 +1,27 @@
+body{
+    background-color: black;
+    background-size: 100% 100%;
+    background-attachment: fixed;
+    position: absolute;
+}
+
+#particles-js {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; 
+}
+
+.error{
+    left: 50%;
+    top: 40%;
+    transform: translate(-50%,-50%);
+    position: fixed;
+    font-size: 48px;
+    font-weight: lighter;
+    text-decoration: underline;
+    color: darkgreen;
+    text-shadow: 0 0 150px #00ff00;
+}

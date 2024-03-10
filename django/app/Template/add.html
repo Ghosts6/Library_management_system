@@ -1,0 +1,55 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="{% static 'fav/favicon-32x32.png'%}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static 'fav/favicon-16x16.png'%}">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="stylesheet" href="{% static 'css/add.css'%}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <title>New Book</title> 
+</head>
+<body>
+    <div id="particles-js"></div>
+    <h1>Adding new book:</h1>
+    <div class="container">
+        <p>New book:</p>
+        <div class="input-container">
+                <label for="name">Book name:</label>
+                <i class="fa-solid fa-book"></i>
+                <input type="text" id="name" placeholder="Book name">
+            </div>
+            <div class="input-container">
+                <label for="Author">Author Name:</label>
+                <i class="fa-solid fa-pen"></i>
+                <input type="text" id="author-name" placeholder="Author name">
+            </div>
+            <div class="input-container">
+                <label for="Genre">Genre:</label>
+                <i class="fa-solid fa-filter"></i>
+                <input type="text" id="genre" placeholder="Genre">
+            </div>
+            <div class="input-container">
+                <label for="Edition">Edition Number:</label>
+                <i class="fa-solid fa-pen-nib"></i>
+                <input type="text" id="edition-number" placeholder="edition">
+            </div>
+            <div class="input-container">
+                <label for="publish-date">Date of publish(YYYY-MM-DD):</label>
+                <i class="fa-solid fa-clock"></i>
+                <input type="text" id="publish-date" placeholder="publish date">
+            </div>
+            <button class="submit-button" id="new-book">submit</button>
+        </div>
+        <button class="home-button" id="Home-button">Home</button>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+<script src="{% static 'js/404.js'%}"></script>
+<script src="{% static 'js/add.js'%}"></script>
+</body>
+</html>

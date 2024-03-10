@@ -1,0 +1,190 @@
+body{
+    background-color: black;
+    background-size: 100% 100%;
+    background-attachment: fixed;
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+}
+
+#particles-js {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; 
+}
+
+h1{
+    cursor: pointer;
+    left: 50%;
+    top: 5%;
+    transform: translate(-50%,-50%);
+    position: fixed;
+    color: transparent;
+    background: linear-gradient(
+        to right,
+        green 0%,
+        darkgreen 50%,
+        rgb(13, 139, 13) 100%
+    );
+    font-size: 32px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: wavy;
+    -webkit-background-clip: text;
+    background-position: left bottom;
+    transition: background-position 0.5s ease-in-out;
+    background-size: 300%;
+    animation: text 5s linear infinite;
+}
+
+h1:hover{
+    text-decoration: underline;
+    text-shadow: 0 0 10px cyan, 0 0 15px cyan , 0 0 0px cyan, 0 0 50px cyan;
+}
+
+@keyframes text{
+    0%{
+    background-position: left bottom;
+    }
+    100%{
+        background-position: right bottom;
+    }
+}
+
+.container{
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    position: fixed;
+    width: 800px;
+    height: 600px;
+    background-color: rgb(2, 2, 2);
+    border: 6px double darkgreen;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgb(16, 148, 148), 0 0 35px rgb(16, 148, 148), 0 0 50px rgb(16, 148, 148), 0 0 120px rgb(16, 148, 148);
+}
+
+.container:hover{
+    border: 6px double green;
+    box-shadow: 0 0 20px cyan, 0 0 35px cyan, 0 0 50px cyan, 0 0 120px cyan; 
+}
+
+.container p{
+    left: 50%;
+    top: 10%;
+    transform: translate(-50%,-50%);
+    position: fixed;
+    color: whitesmoke;
+    font-size: 24px;
+    font-weight: lighter;   
+}
+
+.input-container {
+    left: 75%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    flex-direction: column;
+    margin-top: 180px;
+    margin-bottom: -140px;
+    position: relative;
+}
+
+.input-container i {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: -30px;
+    color: whitesmoke;
+    font-size: 20px;
+}
+
+.input-container label {
+    position: absolute;
+    top: -20px;
+    left: 5px;
+    color: white;
+    font-weight: bold;
+}
+
+input {
+    width: 400px;
+    height: auto;
+    padding: 10px;
+    border: 2px double cyan;
+    border-radius: 5px;
+    color: black;
+    outline: none;
+}
+
+input:hover{
+    box-shadow: 0 0 15px #00a19d, 0 0 25px #00a19d,0 0 35px #00a19d, 0 0 60px #00a19d;
+    border: 2px double rgb(4, 219, 219);
+}
+
+input::placeholder {
+    color: black;
+}
+
+.submit-button{
+    cursor: pointer;
+    bottom: 10px;
+    left: 50%;
+    transform: translate(-50%);
+    position: fixed;
+    width: 250px;
+    height: auto;
+    border: 2px solid cyan;
+    border-radius: 30px;
+    padding: 10px 20px;
+    background-color: white;
+}
+
+.home-button:hover,
+.submit-button:hover{
+    text-decoration: underline;
+    box-shadow: 0 0 15px cyan, 0 0 25px cyan, 0 0 40px cyan, 0 0 100px cyan;
+    background-color: transparent;
+    background: linear-gradient(
+        to right,
+        rgb(12, 197, 197) 0%,
+        rgb(34, 114, 114) 20%,
+        pink  40%,
+        orange 60%,
+        purple 80%,
+        rgb(40, 40, 187) 100%
+    );
+    background-position: left bottom;
+    transition: background-position 0.5s ease-in-out;
+    background-size: 300%;
+    animation: text 5s linear infinite;
+}
+
+@keyframes text{
+    0%{
+    background-position: left bottom;
+    }
+    100%{
+        background-position: right bottom;
+    }
+}
+
+.home-button{
+    cursor: pointer;
+    bottom: 100px;
+    left: 50%;
+    transform: translate(-50%);
+    position: fixed;
+    width: 250px;
+    height: auto;
+    padding: 10px 20px;
+    border: 2px solid cyan;
+    border-radius: 30px;
+    text-align: center;
+    background-color: white;
+    color: black;
+    font-size: 14px;
+    font-weight: bold;
+}
