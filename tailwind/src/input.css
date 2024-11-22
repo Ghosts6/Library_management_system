@@ -1,0 +1,80 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components{
+    .container-js{
+        @apply fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-translucentGray rounded-full border border-white shadow-neon overflow-hidden hover:shadow-neon-hover hover:border-whitesmoke;
+    }
+
+    .operation-button-js{
+        @apply cursor-pointer w-[200px] h-auto p-[10px_20px] border-none rounded-[30px] hover:shadow-button-shadow-js hover:underline;
+    }
+
+    .container-main {
+    @apply flex flex-col justify-around gap-10 items-center w-[800px] h-[600px];
+    }
+
+    .action {
+        @apply flex flex-row justify-center items-center gap-5 w-full px-10;
+    }
+
+    .action-button {
+    @apply cursor-pointer w-[250px] py-3 px-5 rounded-[30px] border-2 border-solid border-cyan-500 bg-white text-black text-[14px] font-bold hover:underline hover:animate-text hover:underline-offset-2 hover:shadow-django-main-button;
+    }
+
+    .display-hs {
+        @apply text-whitesmoke text-[14px] font-bold text-center relative left-1/2 -translate-x-1/2;
+    }
+
+    .result-hs {
+        @apply text-whitesmoke text-[16px] font-bold text-center relative justify-around left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 mt-[150px] mb-[-100px];
+    }
+}
+
+.operation-button-js {
+    background-color: transparent;
+    background: linear-gradient(
+            to right,
+            #fd923f 0%,
+            #00a19d 16.66%,
+            #0c87b7 33.33%,
+            #cb49ff 50%,
+            #ff6666 66.66%,
+            #f9d923 100%
+        );
+    background-position: left bottom;
+    transition: background-position 0.5s ease-in-out;
+    background-size: 300%; 
+    animation: shine 5s linear infinite;
+}
+
+.main-h1 {
+    color: transparent;
+    background: linear-gradient(
+        to right,
+        green 0%,
+        darkgreen 50%,
+        rgb(13, 139, 13) 100%
+    );
+    -webkit-background-clip: text;
+    background-position: left bottom;
+    transition: background-position 0.5s ease-in-out;
+    background-size: 300%;
+}
+
+.action-button:hover{
+    background-color: transparent;
+    background: linear-gradient(
+        to right,
+        rgb(12, 197, 197) 0%,
+        rgb(34, 114, 114) 20%,
+        pink  40%,
+        orange 60%,
+        purple 80%,
+        rgb(40, 40, 187) 100%
+    );
+    background-position: left bottom;
+    transition: background-position 0.5s ease-in-out;
+    background-size: 300%;
+}

@@ -6,16 +6,16 @@
     <link rel="icon" type="image/png" sizes="16x16" href="{% static 'fav/favicon-16x16.png'%}">
     <link rel="manifest" href="/site.webmanifest">
     <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
-    <link rel="stylesheet" href="{% static 'css/404.css'%}">
+    <link rel="stylesheet" href="{% static 'css/output.css'%}">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">    
     <title>404</title>
 </head>
-<body>
-     <div id="particles-js"></div>
-     <dic class="error">Error 404 page not found</dic>
+<body class="bg-black bg-fixed absolute bg-cover">
+     <div id="particles-js" class="fixed left-0 top-0 w-full h-full z-[-1]"></div>
+     <dic class="error left-1/2 top-[40%] fixed -translate-x-1/2 -translate-y-1/2 text-[48px] font-light underline text-green-950 text-shadow-django-404">Error 404 page not found</dic>
 </body>
 <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 <script src="{% static 'js/404.js'%}"></script>

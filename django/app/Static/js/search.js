@@ -26,14 +26,17 @@ document.addEventListener('DOMContentLoaded', function () {
                 if (data.success) {
                     const searchResult = document.getElementById('search-result');
                     searchResult.innerHTML = `
-                        <h2>Name: ${data.book.name}</h2>
-                        <h3>Author: ${data.book.author}</h3>
-                        <h4>Genre: ${data.book.genre}</h4>
-                        <h5>Edition Number: ${data.book.edition_number}</h5>
-                        <h5>Date of Publish: ${data.book.publish_date}</h5>
+                        <h2 class="result-hs">Name: ${data.book.name}</h2>
+                        <h3 class="result-hs">Author: ${data.book.author}</h3>
+                        <h4 class="result-hs">Genre: ${data.book.genre}</h4>
+                        <h5 class="result-hs">Edition Number: ${data.book.edition_number}</h5>
+                        <h5 class="result-hs">Date of Publish: ${data.book.publish_date}</h5>
                     `;
+
                     searchContainer.style.display = 'none';
                     resultContainer.style.display = 'block';
+                    resultContainer.classList.remove('invisible');
+
                 } else {
                     Swal.fire({
                         icon: 'error',
@@ -55,6 +58,8 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     tryAgainButton.addEventListener('click', function () {
-        window.location.href = "../search/";
+        searchContainer.style.display = 'block';
+        resultContainer.style.display = 'none';
     });
 });
+

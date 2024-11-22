@@ -7,34 +7,47 @@
     <link rel="icon" type="image/png" sizes="16x16" href="{% static 'fav/favicon-16x16.png'%}">
     <link rel="manifest" href="/site.webmanifest">
     <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">    
-    <link rel="stylesheet" href="{% static 'css/search.css'%}">
+    <link rel="stylesheet" href="{% static 'css/output.css'%}">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">  
     <title>search</title>
 </head>
-<body>
-    <div id="particles-js"></div>
-    <h1>search for book </h1>
-    <div class="container">
+<body class="bg-black bg-cover bg-fixed overflow-hidden m-0 p-0">
+    <div id="particles-js" class="fixed top-0 left-0 w-full h-full z-[-1]"></div>
+    <h1 class="cursor-pointer main-h1 animate-text left-1/2 top-[10%] -translate-x-1/2 -translate-y-1/2 fixed text-[32px] w-[500px] font-bold text-center no-underline hover:underline hover:underline-offset-2 hover:text-shadow-django-main-h1">
+        search for book 
+    </h1>
+    <div class="container fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[800px] h-[600px] bg-[rgb(2,2,2)] border-double border-8 border-green-800 rounded-lg shadow-django-main-container hover:border-green-600 hover:shadow-django-main-container-hover gap-[4rem] overflow-x-hidden overflow-y-auto">
         <div class="search" id="search-container">
-            <p>Enter book name for search:</p>
-            <div class="input-container">
-                <label for="Name">Book name:</label>
-                <i class="fa-solid fa-magnifying-glass"></i>
-                <input type="text" id="name" placeholder="Book name">
+            <p class="text-whitesmoke text-[24px] font-light no-underline absolute top-[5%] left-1/2 -translate-x-1/2 -translate-y-1/2">
+                Enter book name for search:
+            </p>
+            <div class="input-container fixed left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex flex-col mt-44 -mb-36">
+                <label for="name" class="absolute -top-5 left-1 text-white font-bold">Book name:</label>
+                <i class="fa-solid fa-magnifying-glass absolute top-1/2 left-[-30px] transform -translate-y-1/2 text-white text-lg"></i>
+                <input
+                    type="text"
+                    id="name"
+                    placeholder="Book name"
+                    class="w-[400px] p-2 border-2 border-double border-cyan-400 rounded-md text-black outline-none transition-shadow hover:shadow-[0_0_15px_#00a19d,0_0_25px_#00a19d,0_0_35px_#00a19d,0_0_60px_#00a19d] hover:border-cyan-300 placeholder:text-black"
+                />
             </div>
-            <img src="{% static 'img/search.jpg'%}" alt="img" class="search-img">
-            <button class="buttons" id="search-button">search</button>
+            <img src="{% static 'img/search.jpg'%}" alt="img" class="search-img fixed left-1/2 top-[60%] -translate-x-1/2 -translate-y-1/2 w-[500px] h-[250px] border-2 border-soild border-cyan-400">
+            <button class="action-button bottom-[10px] left-1/2 fixed -translate-x-1/2" id="search-button">search</button>
         </div>
-        <div class="result" id="result-container">
-            <p>Book found:</p>
+        <div class="result invisible" id="result-container">
+            <p class="text-whitesmoke text-[24px] font-light no-underline absolute top-[5%] left-1/2 -translate-x-1/2 -translate-y-1/2">
+                Book found:
+            </p>
             <div id="search-result"></div>
-            <button class="buttons" id="try-again">try again?</button>
+            <button class="action-button bottom-[10px] left-1/2 fixed -translate-x-1/2" id="try-again">try again?</button>
         </div>
     </div>
-    <button class="buttons" id="Home-button">Home</button>
+    <button class="action-button fixed bottom-[100px] left-1/2 transform -translate-x-1/2" id="Home-button">
+        Home
+    </button>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 <script src="{% static 'js/404.js'%}"></script>

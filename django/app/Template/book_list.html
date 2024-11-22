@@ -6,30 +6,34 @@
     <link rel="icon" type="image/png" sizes="16x16" href="{% static 'fav/favicon-16x16.png'%}">
     <link rel="manifest" href="/site.webmanifest">
     <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
-    <link rel="stylesheet" href="{% static 'css/book_list.css'%}">
+    <link rel="stylesheet" href="{% static 'css/output.css'%}">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">  
     <title>inventory</title>
 </head>
-<body>
-    <div id="particles-js"></div>
-    <h1>Book inventory:</h1>
-    <div class="container">
-        <P>List of books:</P>
+<body class="bg-black bg-cover bg-fixed overflow-hidden p-0 m-0">
+    <div id="particles-js" class="fixed top-0 left-0 w-full h-full z-[-1]"></div>
+    <h1 class="cursor-pointer main-h1 animate-text left-1/2 top-[10%] -translate-x-1/2 -translate-y-1/2 fixed text-[32px] w-[500px] font-bold text-center no-underline hover:underline hover:underline-offset-2 hover:text-shadow-django-main-h1">
+        Book inventory:
+    </h1>
+    <div class="container fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[800px] h-[600px] bg-[rgb(2,2,2)] border-double border-8 border-green-800 rounded-lg shadow-django-main-container hover:border-green-600 hover:shadow-django-main-container-hover gap-[4rem] overflow-x-hidden overflow-y-auto">
+        <P class="text-whitesmoke text-[24px] font-light no-underline absolute top-[5%] left-1/2 -translate-x-1/2 -translate-y-1/2">List of books:</P>
         {% for book in books %}
-            <div class="books-container" id="books-container-{{ forloop.counter }}">
-                <h1>Book number {{ forloop.counter }}</h1>
-                <h2>Name: {{ book.name }}</h2>
-                <h3>Author: {{ book.author }}</h3>
-                <h4>Genre: {{ book.genre }}</h4>
-                <h5>Edition Number: {{ book.edition_number }}</h5>
-                <h5>Date of Publish: {{ book.publish_date }}</h5>
+            <div class="books-container relative left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col justify-around gap-10 w-[600px] h-[400px] bg-[rgb(2, 2, 2)] border-[6px] border-double border-green-950 rounded-sm mt-[300px] mb-[-250px]" id="books-container-{{ forloop.counter }}">
+                <h2 class="display-hs">Book number {{ forloop.counter }}</h2>
+                <h3 class="display-hs">Name: {{ book.name }}</h3>
+                <h4 class="display-hs">Author: {{ book.author }}</h4>
+                <h5 class="display-hs">Genre: {{ book.genre }}</h5>
+                <h6 class="display-hs">Edition Number: {{ book.edition_number }}</h6>
+                <h7 class="display-hs">Date of Publish: {{ book.publish_date }}</h7>
             </div>
         {% endfor %}
     </div>
-    <button class="home-button" id="Home-button">Home</button>
+    <button class="action-button fixed bottom-[100px] left-1/2 transform -translate-x-1/2" id="Home-button">
+        Home
+    </button>
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script src="{% static 'js/404.js'%}"></script>
     <script src="{% static 'js/book_list.js'%}"></script>

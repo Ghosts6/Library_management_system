@@ -2,22 +2,22 @@
 <html lang="en">
 <head>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="../tailwind/dist/output.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Library</title>
 </head>
-<body>
-    <h1>---welcome to our program---</h1>
-    <div id="particles-js"></div>
-    <div class="container">
+<body class="bg-gradient bg-transparent bg-fixed bg-[300%] animate-shine overflow-hidden m-0 p-0">
+    <h1 class="text-black text-[32px] font-bold text-center fixed top-[10%] left-[50%] translate-x-[-50%] translate-y-[-50%]">---welcome to our program---</h1>
+    <div id="particles-js" class="fixed top-0 left-0 w-full h-full z-[-1]"></div>
+    <div class="container-js">
         <div class="menu">
-            <u>select operation  :</u>
-            <div class="button">
-            <button class="operation-button">add book</button>
-            <button class="operation-button">book list</button>
-            <button class="operation-button">search</button>
-            <button class="operation-button">exit</button>
+            <u class="text-black no-underline text-center text-[30px] font-bold top-[20%] left-1/2 -translate-x-1/2 -translate-y-1/2 fixed text-shadow-glow-orange">select operation  :</u>
+            <div class="button top-1/2 left-1/2 fixed -translate-x-1/2 -translate-y-1/2 flex flex-col justify-around gap-[35px] text-black text-[20px] font-light mt-[50px]">
+            <button class="operation-button-js">add book</button>
+            <button class="operation-button-js">book list</button>
+            <button class="operation-button-js">search</button>
+            <button class="operation-button-js">exit</button>
             </div>
         </div>
         <div class="add-book">

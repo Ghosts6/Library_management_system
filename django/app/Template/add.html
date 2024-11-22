@@ -7,46 +7,64 @@
     <link rel="icon" type="image/png" sizes="16x16" href="{% static 'fav/favicon-16x16.png'%}">
     <link rel="manifest" href="/site.webmanifest">
     <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
-    <link rel="stylesheet" href="{% static 'css/add.css'%}">
+    <link rel="stylesheet" href="{% static 'css/output.css'%}">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
     <title>New Book</title> 
 </head>
-<body>
-    <div id="particles-js"></div>
-    <h1>Adding new book:</h1>
-    <div class="container">
-        <p>New book:</p>
-        <div class="input-container">
-                <label for="name">Book name:</label>
-                <i class="fa-solid fa-book"></i>
-                <input type="text" id="name" placeholder="Book name">
+<body class="bg-black bg-cover bg-fixed overflow-hidden p-0 m-0">
+    <div id="particles-js" class="fixed top-0 left-0 w-full h-full z-[-1]"></div>
+    
+    <h1 class="cursor-pointer main-h1 animate-text left-1/2 top-[10%] -translate-x-1/2 -translate-y-1/2 fixed text-[32px] w-[500px] font-bold text-center no-underline hover:underline hover:underline-offset-2 hover:text-shadow-django-main-h1">
+        Adding new book:
+    </h1>
+
+    <div class="flex flex-col justify-center items-center fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[800px] h-[600px] bg-[rgb(2,2,2)] border-double border-8 border-green-800 rounded-lg shadow-django-main-container hover:border-green-600 hover:shadow-django-main-container-hover gap-[4rem]">
+        <p class="text-whitesmoke text-[24px] font-light no-underline absolute top-[5%]">New book:</p>
+
+        <div class="flex flex-col gap-10">
+            <div class="relative">
+                <label class="absolute top-[-20px] left-[5px] text-white font-bold" for="name">Book name:</label>
+                <i class="absolute top-1/2 left-[-30px] transform -translate-y-1/2 text-whitesmoke text-lg fa-solid fa-book"></i>
+                <input type="text" class="w-[400px] p-2 rounded-sm border-2 border-double border-cyan-400 text-black outline-none hover:border-cyan-600 hover:shadow-button-shadow-js placeholder:text-black" id="name" placeholder="Book name">
             </div>
-            <div class="input-container">
-                <label for="Author">Author Name:</label>
-                <i class="fa-solid fa-pen"></i>
-                <input type="text" id="author-name" placeholder="Author name">
+
+            <div class="relative">
+                <label class="absolute top-[-20px] left-[5px] text-white font-bold" for="author-name">Author Name:</label>
+                <i class="absolute top-1/2 left-[-30px] transform -translate-y-1/2 text-whitesmoke text-lg fa-solid fa-pen"></i>
+                <input type="text" class="w-[400px] p-2 rounded-sm border-2 border-double border-cyan-400 text-black outline-none hover:border-cyan-600 hover:shadow-button-shadow-js placeholder:text-black" id="author-name" placeholder="Author name">
             </div>
-            <div class="input-container">
-                <label for="Genre">Genre:</label>
-                <i class="fa-solid fa-filter"></i>
-                <input type="text" id="genre" placeholder="Genre">
+
+            <div class="relative">
+                <label class="absolute top-[-20px] left-[5px] text-white font-bold" for="genre">Genre:</label>
+                <i class="absolute top-1/2 left-[-30px] transform -translate-y-1/2 text-whitesmoke text-lg fa-solid fa-filter"></i>
+                <input type="text" class="w-[400px] p-2 rounded-sm border-2 border-double border-cyan-400 text-black outline-none hover:border-cyan-600 hover:shadow-button-shadow-js placeholder:text-black" id="genre" placeholder="Genre">
             </div>
-            <div class="input-container">
-                <label for="Edition">Edition Number:</label>
-                <i class="fa-solid fa-pen-nib"></i>
-                <input type="text" id="edition-number" placeholder="edition">
+
+            <div class="relative">
+                <label class="absolute top-[-20px] left-[5px] text-white font-bold" for="edition-number">Edition Number:</label>
+                <i class="absolute top-1/2 left-[-30px] transform -translate-y-1/2 text-whitesmoke text-lg fa-solid fa-pen-nib"></i>
+                <input type="text" class="w-[400px] p-2 rounded-sm border-2 border-double border-cyan-400 text-black outline-none hover:border-cyan-600 hover:shadow-button-shadow-js placeholder:text-black" id="edition-number" placeholder="Edition">
             </div>
-            <div class="input-container">
-                <label for="publish-date">Date of publish(YYYY-MM-DD):</label>
-                <i class="fa-solid fa-clock"></i>
-                <input type="text" id="publish-date" placeholder="publish date">
+
+            <div class="relative">
+                <label class="absolute top-[-20px] left-[5px] text-white font-bold" for="publish-date">Date of publish (YYYY-MM-DD):</label>
+                <i class="absolute top-1/2 left-[-30px] transform -translate-y-1/2 text-whitesmoke text-lg fa-solid fa-clock"></i>
+                <input type="text" class="w-[400px] p-2 rounded-sm border-2 border-double border-cyan-400 text-black outline-none hover:border-cyan-600 hover:shadow-button-shadow-js placeholder:text-black" id="publish-date" placeholder="Publish date">
             </div>
-            <button class="submit-button" id="new-book">submit</button>
         </div>
-        <button class="home-button" id="Home-button">Home</button>
+
+        <button id="new-book" class="action-button fixed bottom-[5%] left-1/2 transform -translate-x-1/2">
+            Submit
+        </button>
+    </div>
+
+    <button id="Home-button" class="action-button fixed bottom-[100px] left-1/2 transform -translate-x-1/2">
+        Home
+    </button>
+</body>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 <script src="{% static 'js/404.js'%}"></script>
